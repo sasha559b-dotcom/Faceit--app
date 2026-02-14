@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { background: #121212; color: white; font-family: sans-serif; padding: 20px; text-align: center; }
+        .card { background: #1e1e1e; border: 2px solid #ff5500; border-radius: 15px; padding: 20px; margin-bottom: 20px; }
+        .elo { font-size: 32px; color: #ff5500; font-weight: bold; margin: 10px 0; }
+        button { background: #ff5500; color: white; border: none; padding: 15px; width: 100%; border-radius: 10px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 id="username">Player</h2>
+        <div class="elo">2500 ELO</div>
+        <p>LEVEL 10 🔥</p>
+    </div>
+    <button onclick="sendMatch()">НАЙТИ МАТЧ</button>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+        document.getElementById("username").innerText = tg.initDataUnsafe.user.first_name;
+
+        function sendMatch() {
+            tg.sendData("start_queue"); // Бот получит эту строку
+            tg.close();
+        }
+    </script>
+</body>
+</html>
