@@ -19,7 +19,7 @@ from telegram.constants import ParseMode
 #                    НАСТРОЙКИ
 # ════════════════════════════════════════════════
 
-BOT_TOKEN   = "СЮДА_СВОЙ_ТОКЕН"   # ← вставь свой токен от @BotFather
+BOT_TOKEN   = "7818313573:AAHTfCBvQEELEtsG7BRvIcNrxgJ9dckBmlI"   # ← вставь свой токен от @BotFather
 ADMIN_IDS   = [5839642306]         # ← твои Telegram ID
 DATA_FILE   = "faceit_db.json"
 
